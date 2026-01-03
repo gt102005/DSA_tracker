@@ -39,3 +39,4 @@ DSA Tracker is a comprehensive React-based application designed to help develope
    ```bash
    git clone [https://github.com/gt102005/DSA_tracker.git](https://github.com/gt102005/DSA_tracker.git)
    cd DSA_tracker
+   npm install --legacy-peer-deps
