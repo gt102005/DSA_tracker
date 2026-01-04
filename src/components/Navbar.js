@@ -1,41 +1,45 @@
-import React, { useState } from 'react'
-import { Link, Router, Routes , Route } from 'react-router-dom'
-import Status from './Status';
-function Navbar({mode,setmode}) {
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-    const [hidden1, sethidden1] = useState("hidden");
-    const handleClick = () => {
-      mode=="light" ? setmode("dark") : setmode("light");
-    }
+function Navbar({ mode, setmode }) {
 
-     
+    const toggleTheme = () => {
+        setmode(mode === "light" ? "dark" : "light");
+    };
+
+    const handleReset = () => {
+        if (window.confirm("Reset all progress? This action is permanent.")) {
+            localStorage.clear();
+            window.location.reload();
+        }
+    };
+
     return (
-    <div>
-      <div className=' flex justify-between  bg-green-600 '>
-        <div 
-        className='text-gray-200 font-lg text-left hover:text-gray-200  m-3  h-8  '>
+        <header className="navbar-main" >
+            <div className="nav-container" >
+                <div className="nav-brand">
+                    <Link to="/" className="brand-logo">
+                        <span className="accent">DSA</span>TRACKER
+                    </Link>
+                </div>
 
-        {/* <Link className='pr-2 text-teal-600' to="/"> Topics </Link> */}
-       {/* <Router>
-       <Routes>
-        <Route> */}
-               <Link className='pl-2 font-large   ' to="/"  > Dsa tracker </Link>
-       {/* </Route>
-       </Routes>
-       </Router> */}
-        
-        </div>
- <div className='flex align-bottom text-base pr-3 text-center  ' onClick={ ()=>{console.log(hidden1);hidden1=="hidden"?sethidden1("visible"):sethidden1("hidden")}} >
-        <img className='mt-1 w-8 h-9' src="bulb.png "></img>
-        <div className='text-gray-200  text-right  m-2 h-8 ' >
-           Hot Tip
-        </div>
-        </div>
-        
-      </div>
-      {<Status visi={hidden1} / >}
-      </div>
-  )
+                <div className="nav-actions">
+                    <Link to="/add-question" className="action-btn add-btn">
+                        ADD QUESTION
+                    </Link>
+
+                    <button className="action-btn theme-btn" onClick={toggleTheme}>
+                        {mode === "light" ? "DARK MODE" : "LIGHT MODE"}
+                    </button>
+                    
+                    <button className="action-btn reset-btn" onClick={handleReset}>
+                        RESET DATA
+                    </button>
+                </div>
+            </div>
+        </header>
+    );
 }
 
-export default Navbar
+export default Navbar;

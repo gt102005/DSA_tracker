@@ -1,0 +1,101 @@
+/* Navbar.css */
+.navbar-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease; /* Smooth transition between modes */
+}
+
+/* Dynamic Theme Colors */
+.theme-dark {
+    background: rgba(18, 18, 18, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.theme-light {
+    background: rgba(245, 245, 245, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #1a1a1a;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 40px;
+}
+
+.brand-logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: inherit;
+}
+
+.brand-logo .accent {
+    color: #ff9933; /* Signature orange remains consistent */
+}
+
+.nav-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.action-btn {
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+/* Style for Add Question */
+.add-btn {
+    background: rgba(255, 153, 51, 0.1);
+    color: #ff9933;
+    border-color: rgba(255, 153, 51, 0.3);
+}
+
+.add-btn:hover {
+    background: #ff9933;
+    color: #ffffff;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    background: #333;
+    color: #fff;
+}
+
+.theme-light .theme-btn {
+    background: #e0e0e0;
+    color: #333;
+    border-color: #ccc;
+}
+
+/* Reset Button */
+.reset-btn {
+    background: transparent;
+    color: #888;
+    border-color: #444;
+}
+
+.reset-btn:hover {
+    color: #ef4444;
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.05);
+}
+
+/* Body adjustment for the fixed header */
+body {
+    padding-top: 70px;
+}
