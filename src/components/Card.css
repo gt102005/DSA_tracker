@@ -1,4 +1,4 @@
-/* Card.css */
+
 
 .card-wrapper {
   text-decoration: none;
@@ -8,7 +8,7 @@
 
 .topic-card {
   position: relative;
-  background: rgba(30, 30, 30, 0.5); /* Semi-transparent dark background */
+  background: rgba(30, 30, 30, 0.5); 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -22,12 +22,11 @@
   overflow: hidden;
 }
 
-/* Brackets effect from user design */
 .corner {
   position: absolute;
   width: 12px;
   height: 12px;
-  border-color: rgba(255, 153, 51, 0.3); /* Subtle orange */
+  border-color: rgba(255, 153, 51, 0.3); 
   transition: border-color 0.3s ease;
 }
 
@@ -45,7 +44,6 @@
   border-right: 2px solid;
 }
 
-/* Hover effects */
 .topic-card:hover {
   transform: translateY(-8px);
   background: rgba(40, 40, 40, 0.7);
@@ -69,7 +67,6 @@
   margin: 0;
 }
 
-/* Progress Section Styling */
 .progress-section {
   margin-top: 20px;
   display: flex;
@@ -126,7 +123,7 @@
   color: #555;
 }
 
-/* Finished State */
+
 .card-finished {
-  background: rgba(34, 197, 94, 0.05); /* Very subtle green tint */
+  background: rgba(34, 197, 94, 0.05);
 }

@@ -4,7 +4,6 @@ import Status from './Status'
 function Completer() {
   return (
     <div className='flex justify-center mt-8 flex-wrap'>
-      {/* <Status /> */}
       
       <img src={"https://1.bp.blogspot.com/-vgeS11udEZI/X_c3MHIFAmI/AAAAAAAAA8g/JExrMTpJ_c40IqGMOffSQcLuAgVcd-ZmwCLcBGAsYHQ/w400-h225/20210107_122411.jpg"} className='w-auto m-2 h-96'/>
       

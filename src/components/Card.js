@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 
 export default function Card({ name, no, qno }) {
-  // Retrieve checked items from localStorage for this specific topic
   const op = JSON.parse(localStorage.getItem('Checked' + no)) || [];
   
-  // Use a Set to ensure unique IDs and calculate progress
   const completedCount = new Set(op).size;
   const percentage = Math.round((completedCount * 100) / qno);
 
@@ -14,7 +12,6 @@ export default function Card({ name, no, qno }) {
     <Link to={name} className="card-wrapper">
       <div className={`topic-card glass-effect ${percentage === 100 ? 'card-finished' : ''}`}>
         
-        {/* Decorative corner accents from the design reference */}
         <div className="corner top-left"></div>
         <div className="corner bottom-right"></div>
 
@@ -24,7 +21,6 @@ export default function Card({ name, no, qno }) {
 
           {percentage > 0 ? (
             <div className="progress-section">
-              {/* Circular progress SVG */}
               <div className="progress-circle">
                 <svg width="40" height="40">
                   <circle className="bg" cx="20" cy="20" r="18"></circle>

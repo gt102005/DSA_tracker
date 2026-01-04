@@ -1,47 +1,33 @@
-/* App.css */
-
-/* Global container to ensure theme applies to everything */
-.app-container {
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Dark Theme */
-.theme-dark {
-    background-color: #121212 !important;
-    color: #ffffff;
-}
-
-/* Light Theme */
-.theme-light {
-    background-color: #ffffff !important;
-    color: #1a1a1a;
-}
-
-/* Ensure body doesn't have a different background */
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Padding to prevent content from hiding under the fixed navbar */
-.app-container > div, 
-.app-container > section, 
-.app-container > main {
-    padding-top: 80px;
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Example of making cards adapt to light mode */
-.theme-light .glass-effect {
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #1a1a1a;
+.theme-dark {
+  background-color: #121212 !important;
+  color: #ffffff !important;
 }
 
-.theme-light .topic-name, 
-.theme-light .main-title {
-    color: #1a1a1a;
+.theme-light {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+.main-content {
+  padding-top: 80px;
+}
+
+.theme-dark p, .theme-dark h1, .theme-dark h2, .theme-dark td, .theme-dark th {
+  color: #e0e0e0 !important;
+}
+
+.theme-light p, .theme-light h1, .theme-light h2, .theme-light td, .theme-light th {
+  color: #1a1a1a !important;
 }

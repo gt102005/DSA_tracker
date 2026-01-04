@@ -1,112 +1,60 @@
 /* Lister.css */
-.main-wrapper {
-  min-height: 100vh;
-  background-color: #121212; /* Deep charcoal background */
-  color: #e0e0e0;
-  padding: 40px 20px;
+.lister-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.dashboard-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.lister-header {
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-.dashboard-header {
-  margin-bottom: 60px;
-  text-align: left;
+/* Ensure the grid doesn't collapse into one line */
+.cards-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Space between components */
+    padding: 20px 0;
+    width: 100%;
 }
 
-.main-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0;
-  background: linear-gradient(90deg, #ff9933, #ffcc33);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-  color: #888;
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-/* Progress Bar Styling */
 .global-progress-section {
-  margin-top: 30px;
-  max-width: 500px;
+    max-width: 600px;
+    margin: 30px auto;
 }
 
-.progress-labels {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #a0a0a0;
-}
-
-.percentage-text {
-  color: #ff9933;
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .progress-bar-container {
-  height: 8px;
-  background-color: #252525;
-  border-radius: 4px;
-  overflow: hidden;
+    height: 12px;
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .progress-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #ff9933, #ffcc33);
-  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    background-color: #ff9933;
+    transition: width 0.4s ease-in-out;
 }
 
-/* Grid Layout */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+/* Added bottom padding to replace footer space */
+.bottom-spacer {
+    height: 100px;
+    width: 100%;
 }
 
-/* Footer Styling */
-.dashboard-footer {
-  margin-top: 80px;
-  padding-top: 30px;
-  border-top: 1px solid #252525;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-link {
-  color: #ff9933;
-  text-decoration: none;
-  margin-right: 25px;
-  font-size: 0.95rem;
-  transition: opacity 0.2s;
-}
-
-.social-link:hover {
-  opacity: 0.8;
-  text-decoration: underline;
-}
-
-.footer-signature {
-  color: #555;
-  font-size: 0.85rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .dashboard-footer {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  .social-link {
-    margin: 0 10px;
-  }
+/* Desktop spacing */
+@media (min-width: 1024px) {
+    .lister-main-wrapper {
+        padding: 40px 80px;
+    }
 }
