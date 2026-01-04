@@ -1,42 +1,95 @@
-# 🚀 DSA Tracker - 100 Days of Code
+🚀 DSA Tracker - Modern Problem Solving Dashboard
+A high-performance, responsive React application designed to help developers systematically master Data Structures and Algorithms. This tracker features a sophisticated Glassmorphism UI, dark/light mode functionality, and persistent progress tracking.
 
-DSA Tracker is a comprehensive React-based application designed to help developers track their progress while mastering 100 essential Data Structures and Algorithms (DSA) questions. This tool is optimized for interview preparation for product-based companies, providing a structured approach to learning.
+🛠 Tech Stack
+
+Frontend: React.js (v18.2.0) - Powering the component-based architecture.
++2
 
 
+Styling: Standard CSS3 - Custom-crafted styles for Glassmorphism effects and responsiveness, replacing utility-first frameworks.
++2
 
----
 
-## 🛠 Tech Stack
+State Management: React Hooks (useState, useEffect) - Handling real-time progress calculations and theme switching.
++1
 
-- **Framework**: [React.js](https://reactjs.org/) (v18.2.0) - A library for building component-based user interfaces.
-- **State Management**: [Redux](https://redux.js.org/) (v4.2.1) - Manages global state for "checked" questions across the dashboard and lists.
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v3.2.7) - A utility-first CSS framework for modern and responsive UI design.
-- **Persistence**: [React Cookie](https://www.npmjs.com/package/react-cookie) (v4.1.1) - Stores user progress in browser cookies so data remains after refresh.
-- **Routing**: [React Router Dom](https://reactrouter.com/) (v6.8.2) - Enables seamless navigation between topic categories.
-- **Visuals**: [React Top Loader](https://www.npmjs.com/package/react-top-loader) (v1.0.0) - Adds a slim progress bar at the top during route changes.
 
----
+Routing: React Router Dom (v6.8.2) - Seamless client-side navigation between topics.
++1
 
-## ✨ Features
 
-- **Categorized Learning**: Questions are grouped into topics such as Arrays, Strings, Linked Lists, Trees, and more.
-- **Real-time Progress**: Interactive dashboard that shows total questions and unstarted counts for every topic.
-- **Data Persistence**: Uses browser cookies to ensure you never lose your progress, even if you close the tab.
-- **Clean UI**: Built with Tailwind CSS for a distraction-free, professional practicing environment.
-- **Deployment Ready**: Pre-configured for hosting on GitHub Pages with automated build scripts.
+Persistence: Web Storage API (localStorage) - Ensures your "checked" questions and progress are saved even after closing the browser.
++1
 
----
+✨ New Features & UI Enhancements
 
-## 🚀 Getting Started
+🌓 Dynamic Theming: Fully functional Dark and Light modes accessible via a full-width persistent Navbar.
 
-### Prerequisites
-- **Node.js**: v14.0.0 or higher.
-- **npm**: v6.0.0 or higher.
+💎 Glassmorphism Design: Modern card-based layout with semi-transparent backgrounds, blur effects, and "corner-bracket" accents.
 
-### Installation & Setup
+📊 Real-time Progress:
 
-1. **Clone the repository**:
-   ```bash
-   git clone [https://github.com/gt102005/DSA_tracker.git](https://github.com/gt102005/DSA_tracker.git)
-   cd DSA_tracker
-   npm install --legacy-peer-deps
+
+Global Progress Bar: Tracks your overall journey toward mastering 100 questions.
+
+Topic-wise Ring Indicators: Circular progress SVGs on individual cards showing completion percentage per category.
+
+➕ Custom Problem Entry: A dedicated "Add Question" interface to expand your personal study sheet beyond the 100 default questions.
+
+💡 Motivational Core: Integrated imaginary motivational quotes on the dashboard to keep your spirits high during the grind.
+
+🛡 Safe Data Management: A dedicated "Reset Data" feature with safety confirmation to clear your progress if you wish to restart your journey.
+
+🗂 Categorized Learning Path
+Master essential topics required by top product-based companies:
+
+
+Arrays & Strings 
+
+
+Greedy Algorithms 
+
+
+Dynamic Programming 
+
+
+Binary Search 
+
+
+Heaps & Recursion 
+
+
+Linked Lists & Trees (BT/BST) 
+
+
+Stack, Queue & Backtracking 
+
+
+Graphs 
+
+🚀 Getting Started
+Prerequisites
+Node.js: v14.0.0 or higher
+
+npm: v6.0.0 or higher
+
+Installation & Setup
+Clone the repository:
+
+Bash
+
+git clone https://github.com/Dct-tcd/DSA_tracker.git
+cd DSA_tracker
+Install Dependencies:
+
+Bash
+
+npm install
+Run the Application:
+
+Bash
+
+npm start
+📝 Usage Note
+This application utilizes Local Storage to save your progress. If you clear your browser data or use a different browser, your progress will not be synced unless the data is manually exported. Use the Reset Data button in the Navbar to intentionally clear all progress.
