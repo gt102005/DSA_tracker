@@ -69,5 +69,4 @@ Master essential topics required by top product-based companies:
 ## 📝 Usage Note
 This application utilizes **Local Storage** to save your progress. If you clear your browser data or use a different browser, your progress will not be synced unless the data is manually exported. Use the **Reset Data** button in the Navbar to intentionally clear all progress.
 
-***
-*Successfully updated for the 2026 Developer Edition.*
+
